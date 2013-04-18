@@ -57,25 +57,25 @@ echo "bottomMargin     : " $(( $cy + $iy ))
 read -p "Press any key to continue... "
 
 # Top left
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$cx:$cy:0:0 -keyint_min 1 -b 500000 "00"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$cx:$cy:0:0 "00"$outputFile)
 # Top middle
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$ix:$cy:$cx:0 -keyint_min 1 -b 500000 "01"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$ix:$cy:$cx:0 "01"$outputFile)
 # Top right
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$cy:$(( $cx + $ix )):0 -keyint_min 1 -b 500000 "02"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$cy:$(( $cx + $ix )):0 "02"$outputFile)
 
 # Middle left
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$cx:$iy:0:$cy -keyint_min 1 -b 500000 "10"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$cx:$iy:0:$cy -keyint_min 1 "10"$outputFile)
 # Middle middle
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$ix:$iy:$cx:$cy -keyint_min 1 -b 500000 "11"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$ix:$iy:$cx:$cy -keyint_min 1 "11"$outputFile)
 # Middle right
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$iy:$(( $cx + $ix )):$cy -keyint_min 1 -b 500000 "12"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$iy:$(( $cx + $ix )):$cy "12"$outputFile)
 
 # Bottom left
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$cx:$(( $y - ( $cy + $iy ) )):0:$(( $cy + $iy )) -keyint_min 1 -b 500000 "20"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$cx:$(( $y - ( $cy + $iy ) )):0:$(( $cy + $iy )) "20"$outputFile)
 # Bottom middle
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$ix:$(( $y - ( $cy + $iy ) )):$cx:$(( $cy + $iy )) -keyint_min 1 -b 500000 "21"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$ix:$(( $y - ( $cy + $iy ) )):$cx:$(( $cy + $iy )) "21"$outputFile)
 # Bottom right
-echo $(ffmpeg -i $inputFile -ar 22050 -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$(( $y - ( $cy + $iy ) )):$(( $cx + $ix )):$(( $cy + $iy )) -keyint_min 1 -b 500000 "22"$outputFile)
+echo $(ffmpeg -i $inputFile -r 25 -vf crop=$(( $x - ( $cx + $ix ) )):$(( $y - ( $cy + $iy ) )):$(( $cx + $ix )):$(( $cy + $iy )) "22"$outputFile)
 
 
 
