@@ -9,7 +9,9 @@ os.system('clear')
 
 ## User interface
 print ("CROPPING VIDEO")
+print ("Softwares required :")
 print ("Python 3.2")
+print ("FFmpeg 1.0")
 print ("This script is used to crop a video, and to get the parts around the cropped part, resulting in having 9 videos.")
 print ("")
 
