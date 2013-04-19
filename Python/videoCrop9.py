@@ -71,6 +71,8 @@ outputs = {
 for output, i in outputs.items():
     print (output, 'corresponds to', i)
     os.system(i)
+
+# Giving the opportunity to user to check errors
 print("")
 print("")
 print("")
