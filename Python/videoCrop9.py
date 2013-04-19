@@ -9,7 +9,7 @@ os.system('clear')
 
 ## User interface
 print ("CROPPING VIDEO")
-print ("Realised with Python 3.2.")
+print ("Python 3.2")
 print ("This script is used to crop a video, and to get the parts around the cropped part, resulting in having 9 videos.")
 print ("")
 
