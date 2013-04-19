@@ -9,6 +9,7 @@ os.system('clear')
 
 ## User interface
 print ("CROPPING VIDEO")
+print ("This script is used to crop a video, and to get the parts around the cropped part.")
 print ("")
 
 #Get simple var
