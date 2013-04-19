@@ -70,6 +70,7 @@ outputs = {
 # Loop in outputs dictionnary, output is the key, while i is the content.
 for output, i in outputs.items():
     print (output, 'corresponds to', i)
+    #Execute command
     os.system(i)
 
 # Giving the opportunity to user to check errors
