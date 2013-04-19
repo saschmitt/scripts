@@ -1,12 +1,12 @@
 #!/usr/bin/python3.2
 
 ### Import
-import subprocess
 import os
 
 ### Script Begin
 ## Clear the terminal
 os.system('clear')
+
 ## User interface
 print ("CROPPING VIDEO")
 print ("")
@@ -71,5 +71,7 @@ outputs = {
 for output, i in outputs.items():
     print (output, 'corresponds to', i)
     os.system(i)
-
+print("")
+print("")
+print("")
 input("Press ENTER to quit.")
